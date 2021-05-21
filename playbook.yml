@@ -1,5 +1,5 @@
 ---
-- name: Deploy Java program
+- name: Deploy python program
   hosts: all
   become: yes
 
@@ -19,9 +19,9 @@
         mode: 0777
         owner: ec2-user
 
-    - name: "Copier (faire un scp) le dossier projet_python sur le dossier remote /app"
+    - name: "Copier (faire un scp) le dossier app.py sur le dossier remote /app"
       copy:
-        src: helloWorld.class
+        src: app.py
         dest: /app
         mode: 0644
  
