@@ -1,15 +1,15 @@
-FROM python:latest
+FROM python:3.8
  
-RUN mkdir /app
+RUN mkdir -p /app
+
+COPY projet_python.tar.gz /app
+
+WORKDIR /app
 
 #dézziper le projet 
-RUN tar xvf projet_python.tar.gz
-COPY requirements.txt ./
+RUN tar -xvf projet_python.tar.gz
+WORKDIR /app/projet_python
 RUN pip install --no-cache-dir -r requirements.txt
-
-# copy the .py file into our docker image
-COPY app.py /app
-WORKDIR /app
 
 # set the startup command to execute the .py file
 CMD python app.py
