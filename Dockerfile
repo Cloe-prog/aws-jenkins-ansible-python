@@ -7,7 +7,7 @@ COPY projet_python.tar.gz /app
 WORKDIR /app
 
 #dézziper le projet 
-RUN tar xvf projet_python.tar.gz
+RUN tar -xvf projet_python.tar.gz
 WORKDIR /app/projet_python
 RUN pip install --no-cache-dir -r requirements.txt
 
