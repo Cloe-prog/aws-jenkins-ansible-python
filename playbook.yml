@@ -19,9 +19,9 @@
         mode: 0777
         owner: ec2-user
 
-    - name: "Copier (faire un scp) le dossier app.py sur le dossier remote /app"
+    - name: "Copier (faire un scp) le dossier projet_python.tar.gz sur le dossier remote /app"
       copy:
-        src: app.py
+        src: projet_python.tar.gz	
         dest: /app
         mode: 0644
  
