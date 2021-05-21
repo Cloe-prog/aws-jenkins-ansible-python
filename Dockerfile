@@ -3,7 +3,7 @@ FROM python:latest
 RUN mkdir /app
 
 #dézziper le projet 
-#....................
+RUN tar xvf projet_python.tar.gz
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
